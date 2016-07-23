@@ -1,0 +1,33 @@
+{
+  "name": "go-jsonbridge",
+  "version": "1.0.0",
+  "description": "Simple json over TCP",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shadowmint/go-jsonbridge.git"
+  },
+  "files": [
+    "index.js",
+    "scripts",
+    "src"
+  ],
+  "author": "douglas.linder@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shadowmint/go-jsonbridge/issues"
+  },
+  "homepage": "https://github.com/shadowmint/go-jsonbridge",
+  "scripts": {
+    "test": "go test ./src/ntoolkit/...",
+    "postinstall": "node scripts/postinstall.js"
+  },
+  "dependencies": {
+    "go-assert": "github:shadowmint/go-assert#1.0.0",
+    "go-errors": "github:shadowmint/go-errors",
+    "go-linereader": "github:shadowmint/go-linereader#1.0.0",
+    "go-loopback": "github:shadowmint/go-loopback",
+    "mkdirp": "^0.5.1",
+    "ncp": "^2.0.0"
+  }
+}
