@@ -60,11 +60,10 @@ func (bridge *Bridge) Read() error {
 			if err.Timeout() {
 				return nil // Timeouts mean no pending messages, not an error
 			}
-			return errors.Fail(ErrRead{}, err, "Failed to read from stream")
 		}
-	} else {
-		bridge.reader.Write(bridge.buffer.Bytes()[:count])
+		return errors.Fail(ErrRead{}, err, "Failed to read from stream")
 	}
+	bridge.reader.Write(bridge.buffer.Bytes()[:count])
 	return nil
 }
 
