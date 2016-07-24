@@ -3,7 +3,6 @@ package jsonbridge
 import (
 	"bytes"
 	"encoding/json"
-	"fmt"
 	"net"
 	"ntoolkit/errors"
 	"ntoolkit/linereader"
@@ -64,7 +63,6 @@ func (bridge *Bridge) Read() error {
 			return errors.Fail(ErrRead{}, err, "Failed to read from stream")
 		}
 	} else {
-		fmt.Printf("Read: %v\n", string(bridge.buffer.Bytes()[:count]))
 		bridge.reader.Write(bridge.buffer.Bytes()[:count])
 	}
 	return nil
@@ -99,8 +97,6 @@ func (bridge *Bridge) Write(data interface{}) error {
 	if err != nil {
 		return errors.Fail(ErrWrite{}, err, "Failed to write to stream")
 	}
-
-	fmt.Printf("Wrote all bytes to stream!\n")
 
 	return nil
 }
