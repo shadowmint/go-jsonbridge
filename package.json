@@ -23,10 +23,10 @@
     "postinstall": "node scripts/postinstall.js"
   },
   "dependencies": {
-    "go-assert": "github:shadowmint/go-assert#1.0.0",
-    "go-errors": "github:shadowmint/go-errors#1.0.0",
-    "go-linereader": "github:shadowmint/go-linereader#1.0.0",
-    "go-loopback": "github:shadowmint/go-loopback#1.0.0",
+    "go-assert": "github:shadowmint/go-assert",
+    "go-errors": "github:shadowmint/go-errors",
+    "go-linereader": "github:shadowmint/go-linereader",
+    "go-loopback": "github:shadowmint/go-loopback",
     "mkdirp": "^0.5.1",
     "ncp": "^2.0.0"
   }
